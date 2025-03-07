@@ -97,28 +97,7 @@
             <a href="https://chat.openai.com/g/gpt-XXX">🔍 Discuter avec le GPT Perspectives critiques de l'islam</a>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const prompt = urlParams.get("prompt");
     
-            if (prompt) {
-                setTimeout(() => {
-                    let inputBox = document.querySelector("textarea"); // Sélectionne la boîte de saisie
-                    if (inputBox) {
-                        inputBox.value = prompt; // Remplit le champ de texte
-                        inputBox.dispatchEvent(new Event("input", { bubbles: true })); // Déclenche l'événement input
-                        setTimeout(() => {
-                            let submitButton = document.querySelector("button[type='submit']"); // Bouton envoyer
-                            if (submitButton) {
-                                submitButton.click(); // Clique sur le bouton envoyer
-                            }
-                        }, 500); // Petit délai pour que l'input soit bien pris en compte
-                    }
-                }, 2000); // Attendre un peu que la page se charge
-            }
-        });
-    </script>
     </body>
     </html>
     
